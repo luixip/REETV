@@ -1,0 +1,356 @@
+\section{Contexto histórico de las tecnologías de virtualización} \label{historia}
+
+Se puede considerar que la idea relacionada con la virtualización tiene sus inicios desde los comienzos mismos de la computación. Una de las principales motivaciones que dieron origen al concepto de virtualización fue encontrar una manera para aprovechar los recursos de computación existentes y así compartirlos de la manera más eficientemente posible entre diversas tareas. \\
+
+Particularmente, la virtualización tiene sus inicios en la década de 1960, especialmente con el aporte del personal del MIT (Massachusetts Intitute of Technology), quienes reconocieron la necesidad de máquinas virtuales \parencite{ Varian1997, Ameen2013}.\\ 
+
+Para la década de 1970, IBM desarrolló el sistema VM/370, este dispositivo permitía a cada usuario ejecutar acciones como si estuvieran en un entorno aislado, pero todo dentro de un entorno informático de tiempo compartido \parencite{Douglis2013, Varian1997}. En esta misma década \textcite{Goldberg1973} determino en su tesis el concepto de máquina virtual y lo publico junto con \textit{Gerald Popek} en el trabajo  denominado \textit{Formal requirements for virtualizable third generation architectures} \parencite{Popek1974}.\\
+
+
+Para la década de 1980 y mediados de 1990, \textcite{Varasteh2017,Agrawal2013} señalan que la virtualización perdió popularidad gracias a la disminución de los costos en la fabricación de los servidores y la proliferación de las computadoras personales. Esta situación facilitó a las empresas la implantación de un modelo de trabajo distribuido con respecto al hardware y la  adquisición de máquinas independiente para cada necesidad. Por ejemplo, para los servicios Web, bases de datos, correo electrónico, servicio de directorio y el alojamiento de las aplicaciones proprias de cada negocio. Con el pasar los años, esta forma de trabajo distribuido también trajo consigo mayores problemas en la administración de los recursos hardware y el incremento del costo total de propiedad por el aumento del consumo de energía para operar los centros de procesamiento de datos. Por otro lado, \textcite{Ranjith2017} determinan que este tipo de situaciones también presentan una tendencia poco amigable con el medio ambiente. \\
+
+Para finales de los 90s y considerando la problemática anteriormente descrita, la virtualización vuelve nuevamente a ganar  aceptación como una solución complementaria para lograr la consolidación en los centros de procesamiento de datos \parencite{Oludele2014, Sukmana2016}.\\
+
+Con el propósito de identificar algunos de los hitos más representativos en el contexto histórico de la virtualización, a continuación se presenta una línea de tiempo basada en el trabajo de \textcite{Marshall2006}:\\
+				
+\textbf{1960}\\
+\begin{itemize}
+	\item Identificación de la necesidad de virtualización.  \parencite{Ameen2013}.\\
+	\item IBM introduce el concepto de sistema de tiempo compatido (TSS por la sigla en inglés de \textit{Time Sharing Systems}) \parencite{Dittner2011}.\\
+\end{itemize}				
+				
+\textbf{1964}\\
+\begin{itemize}
+	\item IBM anuncia el lanzamiento de la máquina \textit{IBM System/360}.\\
+	
+	\item Lanzamiento del programa CP-40. (CP por la sigla en inglés de \textit{Control Program}) por parte del Centro Científico Cambridge de IBM (SCS por las sigla en inglés de \textit{Cambridge Scientific Center}).\\
+\end{itemize}
+
+\textbf{1965}\\
+\begin{itemize}
+	\item IBM anuncia el lanzamiento de la máquina \textit{IBM System/360 modelo 67 con TSS}.\\
+\end{itemize}
+
+\textbf{1967}\\
+\begin{itemize}
+	\item CP-40 y CMS (\textit{Program/Cambridge Monitor System}).\\
+\end{itemize}
+
+\textbf{1968}\\
+\begin{itemize}
+	\item CP-67 versión 1.\\
+\end{itemize}
+
+\textbf{1969}\\
+\begin{itemize}
+	\item CP-67 versión 2.\\
+\end{itemize}
+
+\textbf{1970}\\
+\begin{itemize}
+	\item CP-67 versión 3.\\
+\end{itemize}
+
+\textbf{1971}\\
+\begin{itemize}
+	\item CP-67 versión 3.1.\\
+\end{itemize}
+
+\textbf{1972}\\
+\begin{itemize}
+	\item IBM System/360 Advanced Function.\\
+\end{itemize}
+
+\textbf{1973}\\
+\begin{itemize}
+	\item Fundación de la asociación metropolitana de usuarios de máquinas virtuales de New York (MVMUA por la sigla en inglés \textit{Metropolitan VM User Association}).\\
+	
+	\item \textit{Robert Goldberg} publica el trabajo llamado \textit{Architectural Principles for Virtual Computer Systems} \parencite{Goldberg1973}.\\
+	
+\end{itemize}
+
+\textbf{1974}\\
+\begin{itemize}
+	\item VM/370 Release 2.\\
+	
+	\item \textit{Robert Goldberg} publica el trabajo llamado \textit{Survey of virutal machines research} \parencite{Goldberg1974}.\\
+	
+	\item \textit{Poket} y \textit{Goldberg} publican el trabajo llamado \textit{Formal requirements for virtualizable third generation architecture} \parencite{Popek1974}\\.
+\end{itemize}
+
+
+\textbf{1980}\\
+\begin{itemize}
+	\item Introducción de la virtualización a nivel de lenguaje.\\
+	
+	\item Se introdujo la \textit{virtualización a nivel de lenguaje} para permitir la potabilidad y el aislamiento a nivel de la aplicación\parencite{Douglis2013}. \\ 
+\end{itemize}
+
+\textbf{1987}\\
+\begin{itemize}
+	\item Debido al surgimiento de Internet, se dio la necesidad de incorporar el soporte para TCP/IP en las máquinas virtuales conocido como VM TCP/IP.\\
+\end{itemize}
+
+\textbf{1988}\\
+\begin{itemize}
+	\item \textit{Jon Garber} crea \textit{Connextix},  una empresas dedicada a la virtualización.\\
+\end{itemize}
+
+
+\textbf{1991}\\
+\begin{itemize}
+	\item CMS Multi-Tasking.\\
+	
+	\item P/370 \\.
+\end{itemize}
+
+
+\textbf{1996}\\
+\begin{itemize}
+	\item Introducción de la máquina virtual de Java (JVM por la sigla \textit{Java Virtual Machine}) \parencite{Lindholm1997,Douglis2013}. \\
+\end{itemize}
+
+
+\textbf{1997}\\
+\begin{itemize}
+	\item La empresa Connectix libera \textit{Virtual PC 1.0} para la plataforma Macinthosh. \\
+\end{itemize}
+				
+\textbf{1998}\\
+\begin{itemize}
+	\item \textit{Diane Greene} funda a \textit{VMware Inc},  una empresas dedicada a la virtualización para los computadores con arquitectura x86.\\
+\end{itemize}
+				
+\textbf{1999}\\
+\begin{itemize}
+	\item VMware lanza \textit{VMware Workstation 1.0}.\\
+\end{itemize}
+				
+\textbf{2000}\\
+\begin{itemize}
+	\item VMware lanza \textit{VMware GSX Server (hosted)} para Windows y Linux.\\
+	
+	\item \textit{FreeBSD Jails} como una implementación inicial en \textit{FreeBSD 4.0}.\\
+\end{itemize}
+				
+\textbf{2001}
+\begin{itemize}
+	\item VMware lanza 
+	
+	\begin{itemize}
+		\item \textit{VMware ESX Server 1.0 (hosteless)}. Esta versión, no requiere un sistema operativo subyacente sobre el hardware; esta técnica de instalación es también conocida como \textit{bare-metal}. \\
+
+		\item \textit{VMware Workstation 3.0}\\
+	\end{itemize}
+	
+	\item Conneectix lanza \textit{Virtual PC for Windows}.  \\
+	
+	\item Linux VServer\\
+	
+\end{itemize}
+				
+\textbf{2002}
+\begin{itemize}
+	\item VMware lanza: \\
+	\begin{itemize}
+		\item \textit{VMware GSX Server 2.0}\\
+		\item \textit{VMware ESX 1.5}\\
+		\item \textit{VMware Workstation 3.1}\\
+	\end{itemize}
+	
+	 \item Los productos de VMware ya cuenta con más de un millón de usuarios. \\
+\end{itemize}
+
+\textbf{2003}
+\begin{itemize}
+	\item VMware lanza: \\
+	\begin{itemize}
+		\item \textit{VMware GSX Server 2.5}.\\
+		\item \textit{VMware ESX 2.0}.\\
+		\item \textit{VMware Virtual Center}.\\
+		\item \textit{VMware vMotion}.\\
+		\item \textit{VMware Virtual SMP}.\\
+		\item \textit{VMware Workstation 4.0}\\
+	\end{itemize}
+	\item Connectix lanza \textit{Virtual Server 1.0 RC}.\\
+	
+	\item Microsoft adquiere la empresa Connectix con los productos \textit{Virutal PC} y \textit{Virtual Server}. \\
+	
+\end{itemize}
+			
+\textbf{2004}
+\begin{itemize}
+	\item La empresa EMC Inc adquiere a VMware Inc.\\
+	
+	\item VMware lanza: \\
+	\begin{itemize}
+		\item Soporte para 64-bits\\ 
+		\item \textit{VMware GSX Server 3.0 y 3.1}\\
+		\item \textit{VMware ESX Server 2.5}\\
+		\item \textit{VMware Workstation 4.5}\\
+		
+		
+	\end{itemize}
+
+	\item Xen v1 Linux con Paravirtualization. \\
+	\item Microsoft lanza \textit{Microsoft Virtual Server 2005}. \\
+	
+\end{itemize}
+
+\textbf{2005}
+\begin{itemize}
+	\item VMware lanza los siguientes productos: \\
+	
+	\item \textit{VMware Workstation 5.0 y 5.5}\\
+	
+	\item \textit{VMware Player}\\
+	
+	\item Xen v2 Linux con Paravirtualization\\
+	
+	\item \textit{Solaris Zones} incluidas en el sistema operativo \textit{Solaris}\\
+	
+	\item OpenVZ (Open Virtuozzo)\\
+\end{itemize}
+
+\textbf{2006}
+\begin{itemize}
+	\item \textit{VMware Server} \\
+	
+	\item Microsoft lanza \textit{Virtual Server 2005 R2 Enterprise Edition}\\
+	
+	\item \textit{Virtual Server 2005 R2 Enterprise Edition SP1} incluye soporte para las tecnologías de virtualización asistida por hardware de Intel VT (IVT) y AMD Virtualization (AMD-V)\\
+	
+	\item La empresa Parallels Inc lanza \textit{Parallels Workstation for Mac OS X}\\
+	
+	\item Google lanza \textit{Process Containers} \\
+	
+\end{itemize}
+	
+\textbf{2007}\\
+\begin{itemize}
+	\item Primera generación de \textit{Hardware Assisted Virtualization}\\
+	
+	\item KVM es integrado con el Kernel Linux\\
+	
+	\item \textit{Innotek GmbH } lanza \textit{Virtual Box (Open Source Ediction)}\\
+	
+	\item Xen v3 Linux con  \textit{Hardware Assisted Virtualization}\\
+	
+	\item Solaris Containers sólo para arquitectura SPARC\\
+	
+	\item \textit{VMware Workstation 6.0}\\
+	
+	\item \textit{Parallel Desktop 3.0 for Mac}\\
+\end{itemize}
+			
+\textbf{2008}\\
+\begin{itemize}
+	\item \textit{VMware Workstation 6.5}\\
+	
+	\item Sun Microsystems aquiere a \textit{Innotek}\\
+	
+	\item Microsoft lanza \textit{Hyper-V} junto con \textit{Windows Server 2008} como un rol del sistema operativo\\
+	
+	\item Linux Containers (LXC)\\
+	
+	\item Linux VServer\\
+	
+	\item \textit{Parallel Desktop 4.0 for Mac}\\
+\end{itemize}
+			
+\textbf{2009}\\
+\begin{itemize}
+	\item Microsoft lanza \textit{Windows Virtual PC} \\
+	
+	\item Hyper-V Server 2008 R2\\
+	
+	\item \textit{VMware Workstation 7.0}\\
+	
+	\item \textit{Parallel Desktop 5.0 y 6.0 for Mac}\\
+\end{itemize}
+
+\textbf{2010}\\
+\begin{itemize}
+	\item \textit{Parallel Desktop 6.0 for Mac}\\	
+\end{itemize}
+
+\textbf{2011}\\
+\begin{itemize}
+	\item \textit{VMware Workstation 8.0}\\
+	
+	\item Oracle Corporation aquiere a Sun Microsystems renombra \textit{Virtualbox} como \textit{Oracle VM VirtualBox}\\
+	
+	\item \textit{Parallel Desktop 7.0 for Mac}\\	
+\end{itemize}
+
+\textbf{2012}\\
+\begin{itemize}
+	\item \textit{VMware Workstation 9.0}\\
+	
+	\item \textit{Parallel Desktop 8.0 for Mac}\\	
+\end{itemize}
+
+\textbf{2013}\\
+
+\begin{itemize}
+	\item Google inicia a trabaja en \textit{LMCTFY} (por la sigla en ingles \textit{Let Met Contain That For You})\\
+	
+	\item Lanzamiento de \textit{Docker}, desarrollado por \textit{Salomón Hykes}. Docker inicialmente utiliza la interfaz LXC para acceder a las capacidades de virtualización del kernel Linux \parencite{Turnbull2014}.  Se libera hasta la versión 0.7.2\\
+	
+	\item \textit{VMware Workstation 10.0}\\
+	
+	\item \textit{Parallel Desktop 9.0 for Mac}\\	
+	
+\end{itemize}
+
+\textbf{2014}\\
+\begin{itemize}
+	\item Lanzamiento de \textit{Docker} 0.9, el cual utiliza una librería propia como interfaz para remplazar a LXC llamada \textit{libcontainer} y así acceder a las capacidades del kernel directamente \parencite{Kurtzer2017}\\
+	
+	\item \textit{Parallel Desktop 10.0 for Mac}\\	
+	
+	\item \textit{Docker} desde la versión 0.7.3 hasta la 1.4.1
+	
+\end{itemize}
+
+
+\textbf{2015}\\
+\begin{itemize}
+	\item La empresa \textit{Dell Inc} adquiere a EMC que en el 2004 había adquirido a VMware\\
+	
+	\item \textit{VMware Workstation 11.0 y 12.0}\\
+	
+	\item \textit{Parallel Desktop 11.0 for Mac}\\	
+	
+	\item Inicio del proyecto open-souce \textit{Singularity}. Una herramienta de virtualización a nivel del sistema operativo\\
+	
+	\textit{Docker} desde la versión 1.5.0 hasta la 1.9.1\\
+	
+\end{itemize}
+
+
+\textbf{2016}\\
+\begin{itemize}
+	\item \textit{Parallel Desktop 12.0 for Mac}\\	
+	\item \textit{Singularity 1.0 a 2.2}\\
+	
+	\textit{Docker} desde la versión 1.10.0 hasta la 1.12.5\\	
+\end{itemize}
+
+\textbf{2017}\\
+\begin{itemize}
+	\item \textit{VMware Workstation 14.0}\\
+	\item \textit{Parallel Desktop 13.0 for Mac}\\	
+	
+	\textit{Docker} desde la versión 1.12.6 hasta la 1.13.1. Posteriormente, \textit{Docker} cambia la forma de realizar la numeración en la versión, para hacerla coincidir con el año y mes de liberación. También se agrega CE o EE para diferenciar la versión \textit{Community Edition} o \textit{Enterprise Edition} respectivamente. Para 2017 se entregaron desde la versión 17.03.0-ce hasta la 17.12.0-ce \parencite{DockerRelease2018}.\\
+	
+	\item \textit{Singularity 2.2.1 a 2.4}	\\
+\end{itemize}
+
+\textbf{2018}\\
+\begin{itemize}
+	\item \textit{VMware Workstation 15.0}\\
+	\item \textit{Parallel Desktop 14.0 for Mac}\\		
+	\item \textit{Docker 18.0.1-ce a 18.09.0-ce} \\
+	\item \textit{Singularity 2.4.2 a 2.5.2} \parencite{Singularity2018}\\
+\end{itemize}
