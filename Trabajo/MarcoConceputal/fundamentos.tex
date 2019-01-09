@@ -148,3 +148,56 @@ Este tipo de virtualización utiliza un proceso  o aplicación sobre el sistema 
 
 \subsubsection{Virtualización de Sistema Operativo}
 Este tipo de virtualización necesita un sistema operativo \textit{host} el cual lleva a cabo las funciones de un hipervisor para soportar los sistemas operativos \textit{guests},  que a su vez tienen sus propias aplicaciones completamente independientes, por ejemplo \textit{User Mode Linux} \parencite{Dike2006}  y \textit{Minix Over Linux} \parencite{Pessolani2012}.
+
+
+\subsection{Beneficios de la virtualización}
+
+Las tecnologías de virtualización presentan para las organizaciones una gran cantidad de beneficios en diversos aspectos como el económico, técnico, estratégico y ecológico; lo cuales se describen a continuación.\\
+
+\begin{itemize}
+	\item \textbf{Beneficios económicos}\\
+	\begin{itemize}
+		
+		\item \textit{Reducción de compras en TI}: A través de la combinación de la consolidación física y las tecnologías de virtualización, es posible lograr la disminución en la compra de componentes de TI en las organizaciones. Esta disminución se logra, debido a que en muchos casos es posible utilizar 20 máquinas virtuales o más por cada servidor físico. \\
+		
+		\item \textit{Mejor ROI}: La virtualización está en la línea de la mejora del ROI, por el hecho de lograr una tasa adecuada en la  utilización de los recurso de TI, esto es, evitando el sobre-dimensionamiento de los servidores. En su lugar, se obtiene una mayor aprovechamiento de las inversiones e incluso una reducción de las mismas como lo dijo anteriormente. \\
+				
+		\item \textit{Menor TCO}: Debido a que muchas máquinas virtuales se crean por cada servidor físico, se logra reducir los contratos por soporte y mantenimiento de estos servidores, además de se disminuye el consumo eléctrico al contar con menos equipos, lo que impacta también la reducción del gasto en energía que deben a asumir las organizaciones.\\
+		
+	\end{itemize}
+	\item \textbf{Beneficios técnicos}\\
+	\begin{itemize}
+		\item \textit{Administración de TI simplificada}: Con la implementación de las tecnologías de virtualización en un departamento de TI, es notoria la simplificación de tareas a realizar con relación a los mantenimientos físicos en los equipos, debido a que hay menor cantidad de servidores para atender las necesidades organizacionales. Por otro lado, las tecnologías de virtualización ofrecen herramientas software que permiten la unificación de la administración, facilitando la gestión y disminuyendo el personal necesario en estas tareas.\\
+		
+		\item \textit{Aprovisionamiento}: Algunas organizaciones tiene que proveer ambientes de trabajo homogéneos a diversos empleados como es el caso de las compañías de desarrollo de software, editores de revistas o diseñadores gráficos. Esta situación es especialmente favorable para lograr mayor productividad de los empleados al momento de ser contratados, de tal forma que puedan contar rápidamente con una ambiente de trabajo totalmente operativo. Incluso en caso de deterioro de los sistemas operativos o por causas ajenas como daños en equipos, a través de copias de respaldo se pueden realizar un rápido aprovisionamiento para garantizar productividad y continuidad de necio.\\  
+		
+		\item \textit{Copias de respaldo}: La virtualización provee una capa de abstracción de la infraestructura de TI, la cual es representada a través de un conjunto de  archivos. Estos archivos pueden ser fácilmente respaldados y restaurados. Esta característica favorece en la realización de copias de seguridad incluso en tiempo real y simplifican los procesos de recuperación ante desastres.\\
+		
+		\item \textit{Balanceo de carga}: Con la virtualización, una organización puede decidir según sus necesidades particulares, realizar ajustes dinámicos sobre el uso de su infraestructura de cómputo, de tal forma que se pueda balancear las cargas de trabajo al punto tal que se brinden las tasas de utilización deseadas en los recursos de TI o responder de forma efectiva frente a casos de falla en los componentes físicos.\\
+		
+		\item \textit{Migración en vivo}: Algunas herramientas de virtualización proveen el posibilidad de realizar el movimiento de las máquinas virtuales aún en plena ejecución, es decir que se trasladan desde un servidor a otro. Este movimiento se realiza sin que represente a los usuarios algún tipo fallo en la disponibilidad de los servicios soportados por la máquina virtual que se esté moviendo. \\
+				
+		\item \textit{Seguridad}: Las tecnologías de virtualización proveen la posibilidad de aislar cada máquina virtual de las otras, así, es posible agregar un eslabón adicional en la cadena de seguridad de TI. Por otro lado, al contar con una administración centralizada mejora el monitoreo y control de las máquinas virtuales para aplicación efectiva de políticas de seguridad.\\
+		
+	\end{itemize}
+	\item \textbf{Beneficios estratégicos}\\
+	\begin{itemize}
+		
+		\item \textit{Consolidación}: Las tecnologías de virtualización permiten reducir la cantidad de componentes físicos de TI necesarios en las organizaciones, permitiendo establecer mejores contratos de soporte y mantenimiento de los mismos, además de realizar un optimo aprovechamiento de los recursos de TI existentes, al lograr una mayor tasa de utilización de los mismos.\\
+		
+		\item \textit{Continuidad de negocio}. Es evidente la existencia de diversas situaciones amenazantes que pueden colocar a las organizaciones frente a contingencias, desastres naturales o fallas en los elementos de la infraestructura de cómputo. Estas situaciones puede traer consecuencias como la pérdida de ganancias y clientes;  la aplicación de sanciones por posibles incumplimientos, además de la deficiencia de imagen proyectada por no tener disponibles los servicios objeto del negocio. Es por esto que las tecnologías de virtualización, proveen mecanismos tecnológicos que como una alternativa de solución a cada uno de los problemas antes mencionados. Por ejemplo, con la virtualización existe la posibilidad de continuar la operación de servicios en línea pese a la falla directa de un servidor físico; esto se logra, gracias a técnicas que permiten el movimiento de máquinas virtuales a otros servidores que aun se encuentren disponibles. Aspectos como estos, permiten ir claramente en el camino de mejora en los procesos de continuidad de negocio y permite también la construcción de eficientes planes de recuperación antes desastres.\\
+		
+		\item \textit{Recuperación de desastres}: Es imposible evitar la materialización de un desastre, pero gracias a las tecnologías de virtualización, es posible realizar una rápida recuperación, a partir de copias de respaldo existentes, las máquinas virtuales pueden ser desplegadas en minutos en una nueva infraestructura de cómputo o incluso ubicada en linea como servicio de \textit{Cloud Computing}.\\
+		
+	\end{itemize}
+	\item \textbf{Beneficios ecológicos}\\
+	\begin{itemize}
+		
+		\item \textit{Eficiencia energética}: Al utilizar tecnologías de virtualización se obtiene una reducción de los servidores físicos necesarios en las organizaciones y en consecuencia se obtiene menor consumo de energía para mantener las operaciones de producción organizacional. \\
+		
+		\item \textit{Reducción en refrigeración}: Otro efecto de la disminución en la cantidad de servidores físicos es la generación de menos calor y en consecuencia menor esfuerzo para lograr mantener los centros de datos en condiciones de climatización ideales para la operación de la infraestructura de TI.\\
+		
+		\item \textit{Menor huella de carbono}: Al requerir menor cantidad de servidores físicos, la disminución de este tipo de aparatos tiene también una reducción en el impacto ambiental de su fabricación y se alinea con una disminución en la huella de carbono de las organizaciones que utilizan la virtualización.\\
+	\end{itemize}
+\end{itemize}
+
