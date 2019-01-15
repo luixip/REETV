@@ -1,42 +1,51 @@
-\section{Ámbitos de aplicación de las tecnologías de virtualización} \label{ambitos}
-
-Las tecnologías de virtualización brindan una variedad de beneficios
-
-que pueden ser aprovechados en diversos ámbitos como la industria, la academia y la investigación. Cada uno de estos ámbitos suele aprovechar los beneficios que brindan las tecnologías de virtuales. Algunos de los principales beneficios se describen a continuación:\\
-
-\begin{itemize}
-	\item 
-\end{itemize}
-
-  de aplicación debido debido a los beneficios que presentan respecto a menor TCO y mejor ROI. 
-
-
+\section{Ámbitos de aplicación de las tecnologías de virtualización} \label{sec:ambitos}
+\vspace{5mm}
+Las tecnologías de virtualización brindan una variedad de beneficios que pueden ser aprovechados en diversos ámbitos de aplicación como la industria o la academia, entre otros. Cada uno de estos ámbitos suele aprovechar los beneficios que brindan las tecnologías de virtualización para sacar provecho de ellas. A continuación se presenta una breve descripción de estos ámbitos y la manera como las tecnologías de virtualización logran aportar valor en ellos.\\
 
 \subsection{Ámbito Industrial}
+\vspace{5mm}
+En el ámbito industrial, existen también una gran variedad de áreas de aplicación de las tecnologías de virtualización, entre ellas las siguientes: \\
 
-\begin{description}
-	\item[Centro de procesamiento de datos] Empresas especializadas en infraestructura con centro de procesaminto de datos (CDP o en inglés \textit{Datacenter}).
-\end{description}
+\begin{itemize}
+	\item \textit{Centro de procesamiento de datos}\vspace{3mm} 
+	
+	Los centros de procesamientos de datos (CDP o en inglés \textit{Datacenter}), son claramente uno de los lugares idóneos para la utilización de las tecnologías de virtualización, pues es allí dónde las organizaciones tienen sus implementaciones en infraestructura de TI.  Para las organizaciones que poseen sus propios CDP es actualmente una decisión estratégica el uso de tecnologías de virtualización como se pudo evidenciar al momento de describir los beneficios de la virtualización (ver  apartado \ref{sec:beneficios}), dentro de los cuales se destaca el aumento del ROI y la disminución del TCO \parencite{Bugnion2017}.\\ 
+	
+	\item \textit{Computación en la Nube}\vspace{3mm} 
+	
+	Las tecnologías de virtualización son el elemento subyacente y necesario para el surgimiento del Concepto de \textit{Computación en la nube} (en inglés \textit{Cloud Computing}) \parencite{Souvik2013, Sunilkumar2014}. Es por esto, que mediante la computación en la nube se hace uso constante de las tecnologías de virtualización a través de sus modelos de servicios como son \textit{infraestructura como servicio} (IaaS por las siglas en inglés \textit{Infrastructure as a Service}), \textit{plataforma como servicio} (PaaS por las siglas en inglés \textit{Platform as a Service}) y \textit{software como servicio} (SaaS por las siglas en inglés \textit{Software as a Service}) \parencite{NIST2011}. Cada uno de estos modelos de servicios utilizan tecnologías de virtualización de diferente tipo, las cuales aplican en diversos niveles de abstracción de la computación, ya sea a nivel de máquina, plataforma o aplicación respectivamente.\\
+	
+	\item \textit{Desarrollo de software}\vspace{3mm}
+	
+	Para las organizaciones dedicadas al desarrollo de software, el uso de tecnologías de virtualización es una absoluta necesidad para garantizar procedimientos con una alta competitividad. Esto se ve reflejado en tendencias como \textit{DevOps} (del inglés \textit{development and operations}) y el uso de contenedores como \textit{Docker} para facilitar el despliegue de ambientes homogéneos para desarrollo, pruebas pre-producción y producción \parencite{Uphill2017}. De esta forma se garantiza que el funcionamiento de los ambientes operativos no representen problemas a la hora migrar el código de una zona  a otra. \\
+	
+	\item \textit{Internet de las Cosas}\vspace{3mm}
+	
+	Internet de las Cosas o IoT (por las siglas en inglés \textit{Internet Of Things}) es una área que se está logrando potenciar gracias a la \textit{Virtualización Liviana} (en inglés \textit{Lightwiht Virtualization}), tales como los contenedores y \textit{unikernels}, que a su vez brindan el soporte necesario en términos de abstracción de hardware, capacidad de programación, interoperabilidad y elasticidad que incluye ejemplos como  \parencite{Morabito2018}.
+	
+	 
+\end{itemize}
 
+\subsection{Ámbito Académico}
+\vspace{5mm}
+En el ámbito académico, las tecnología de virtualización pueden tomar lugar en aspectos como los siguientes:\\
 
+\begin{itemize}
+	\item \textit{Ambientes de trabajo homogéneos} \vspace{3mm}
+	
+	Mediante el uso de plantillas de máquinas virtuales, es posible ofrecer un rápido aprovisionamiento de ambientes de trabajo para estudiantes. Estos ambientes son generalmente homogéneos y evitan a los estudiantes y profesores perder tiempo en actividades de instalación y configuración de aplicaciones durante sus clases. Pudiendo optimizar el tiempo para trabajar en los objetivos primarios de sus clases.\\
+	
+	\item \textit{Integridad de las de estaciones de trabajo}\vspace{3mm} 
+	
+	Mantener el software de las estaciones de trabajo de las instituciones de educación inalterado al utilizar máquinas virtuales para la ejecución de aplicaciones que podrían causar daños en las estaciones de trabajo (amenazas informáticas o errores de manipulación del sistema operativo). De esta forma, se logra evitar el aumento de las intervenciones por parte del persona de soporte y mantenimiento de estas instituciones. Así mismo, se brinda una mayor disponibilidad de las estaciones de trabajo tan necesarias para la comunidad académica en general. \\
+	
+	\item \textit{Enseñanza de programación} \vspace{3mm} 
+	
+	En las instituciones de educación superior es común la enseñanza de la programación de computadores, y en gran parte de ellas se prefiere la utilización de lenguajes poco acoplados al hardware. Estos lenguajes utilizan la virtualización a nivel de proceso o aplicación según la taxonomía de máquinas virtuales de  \textcite{Pessolani2012}. La idea general allí es crear código fuente para la arquitectura de una máquina virtual que es fácilmente portable e independiente a las arquitecturas hardware subyacente. Los ejemplos más representativos de este tipo de virtualización son Java Virtual Machine (JVM) y .NET de Microsoft. \\
 
-Facilita la aplicación de los planes de continuidad de negocio en las organizaciones. 
+	\item \textit{Reproducción de experimentos}\vspace{3mm}
+	
+	Para la comunidad científica en general es adecuado poder socializar el resultado de los trabajos de investigación. Muchos de estos trabajos están basados en la utilización de ambientes de laboratorio basados en tecnologías de información como software y bases de datos. Es por esto que las tecnologías de virtualización toman un papel preponderante para lograr la generación de ambientes de laboratorio idénticos al original y así permitir la reproducción de los experimentos a otros investigadores interesados, sin incurrir en los problemas asociados a las configuraciones de las herramientas utilizadas.
+	
+\end{itemize}
 
-Desarrollo de software
-
-Favorece el rápido despliegue de ambientes de trabajo, reduciendo así el tiempo de entrada en producción de nuevos empleados en las organizaciones. \\
-
-
-Internet de las Cosas o IoT (por las siglas en inglés Internet Of Things) es una área que se está logrando potenciar gracias a la virtualización basada en el sistema operativo, también llamada \textit{Virtualización Liviana} (en inglés Lightwiht Virtualization). 
-
-
-
-\subsection{Académico}
-
-Enseñanza de las tecnologías de virtualización
-
-
-Virtualización de entornos de trabajo (docker)
-
-
-Lenguajes de programación (Java Virtual Machine y .NET)

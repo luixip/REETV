@@ -1,9 +1,9 @@
-\section{Fundamentos de la virtualización}\label{fundamentos}
-
+\section{Fundamentos de la virtualización}\label{sec:fundamentos}
+\vspace{5mm}
 Para realizar una referencia a los fundamentos teóricos, a continuación, se presentan en primera instancia el concepto mismo de la virtualización, seguido de elementos y técnicas de utilización; además se presenta la  taxonomía de referencias utilizada en el presente trabajo. 
 
 \subsection{Virtualización}
-
+\vspace{5mm}
 La virtualización puede ser considerada como la combinación de diferentes tecnologías, que ofrece a las organizaciones gran variedad de ventajas como el apoyo para la gestión de grandes volúmenes de datos, la posibilidad de escalar rápidamente la infraestructura de aplicaciones y el aprovechamiento de grandes capacidades de cómputo; técnicamente y según lo señala \textcite{Kusnetzky2011}, la virtualización permite abstraer aplicaciones y los componentes subyacentes de hardware para ser presentados como una vista lógica o virtual de estos recursos \parencite{AbdElRahem2016}. Esta vista lógica puede ser en ocasiones notablemente diferente a la vista física, la cual por lo general se construye a partir del exceso de recursos de computación, tales como el poder de  procesamiento, la memoria, la capacidad de almacenamiento o incluso el ancho de banda \parencite{Stallings2015}.\\
 
 En complemento a lo anterior, \textcite{Silberschatz2014} señalan que la virtualización está relacionada con la tecnología que permite que los sistemas operativos se ejecuten como aplicaciones dentro de otros sistemas operativos. \\
@@ -24,19 +24,19 @@ A través de la virtualización es posible crear una vista lógica  que combine 
 
 Desafortunadamente la arquitectura de computadores x86 a pesar de ser una de las más populares en el mundo, no es virtualizable al 100\% \parencite{Adams}. En esta arquitectura, al ejecutar instrucciones en modo no privilegiado, algunas de ellas pueden fallar silenciosamente en lugar de provocar una trampa y así brindar su respectivo tratamiento. Esta situación ha tenido respuesta a través de mecanismos y formas de virtualización que actúan en diversos niveles de abstracción. Los niveles de abstracción dónde la virtualización tiene lugar son los siguientes: nivel del conjunto de instrucciones, nivel de abstracción de hardware, nivel de sistema operativo, nivel de interfaz de biblioteca de nivel de usuario y finalmente en el nivel de aplicación \parencite{Chiueh2005}.\\
 
-Los conceptos acerca de la virtualización se presentan agrupados en las categorías \textit{elementos} y  \textit{técnicas de la virtualización}, cuya descripción se muestra en los apartados siguientes.
+Los conceptos acerca de la virtualización se presentan agrupados en las categorías \textit{elementos} y  \textit{técnicas de la virtualización}, cuya descripción se muestra en los apartados siguientes.\\
 
 
-\subsection{Elementos de la virtualización}
-
+\subsection{Elementos de la virtualización}\label{sec:elementos}
+\vspace{5mm}
 Los elementos \textit{máquina real}, \textit{máquina virtual} y \textit{monitor de máquinas virtuales}, son considerados básicos para la comprensión de las tecnologías de virtualización y se describen a continuación.
 
 \subsubsection{Máquina real}
-
+\vspace{5mm}
 El término \textit{máquina real} (RM por sus siglas en inglés \textit{Real Machine}) referencia los elementos físicos de la infraestructura tecnológica que conforman un computador; ya sea un computador personal, una estación de trabajo o un servidor. Otras referencias a este concepto son los términos en inglés \textit{hardware}, \textit{physical hardware}, \textit{bare-metal}. En el ámbito informático comercial es común que se refiera al concepto de RM utilizando la palabra \textit{anfitrión} o en inglés \textit{host} \parencite{VMware2008}. 
 
 \subsubsection{Máquina virtual}
-
+\vspace{5mm}
 El concepto de \textit{máquina virtual} (VM por sus siglas en inglés \textit{Virtual Machine}) no es nuevo y fue formalizado en la tesis de  \textcite{Goldberg1973} y publicado en el trabajo académico de \textcite{Goldberg1974}; en estos trabajos se establecen las bases conceptuales para determinar el significado de una VM, siendo esta asumida como un duplicado eficiente y aislado de una RM, ver figura \ref{fig:TheVirtualMachineMonitor_Popek1974}.\\
 
 Actualmente el concepto de VM hace referencia a un ambiente operativo para el conjunto de aplicaciones del nivel de usuario, lo cual incluye librerías, llamados al sistema, interfaces/servicios, configuraciones del sistema, procesos y archivos de estado \parencite{Chiueh2005}. Otra forma de presentar el concepto de VM según \textcite{Solis2014}, es relacionarlo con una capa de software, la cual se posiciona entre los recursos hardware o software y las aplicaciones. También es muy común que en el ámbito informático comercial se refiera al concepto de VM utilizando la palabra \textit{invitado(a)} o en inglés \textit{guest} \parencite{VMware2008}. Finalmente, \textcite{Pek2013} establecen que una VM, es también considerada como una abstracción de recursos de computación presentados como servicio para permitir que éstos operen simultáneamente sobre la misma infraestructura de la RM .
@@ -52,8 +52,8 @@ Actualmente el concepto de VM hace referencia a un ambiente operativo para el co
 \footnotetext[2]{Basada en la figura original del monitor de máquina virtual del trabajo \textit{formal Requirements for Virtualizable Thrid Generation Architectures} de Gerald J. Popek y Robert P. Goldberg en 1974.}
 
 \subsubsection{Monitor de máquinas virtuales}
-
-El término monitor de máquina virtual (VMM por sus siglas en inglés \textit{Virtual Machine Monitor}), fue establecido en el trabajo de \textit{Popek} y \textit{Goldger} \cite{Popek1974}, en el cual  se definieron las bases conceptuales de un VMM como una pieza de software que tiene las siguientes tres características esenciales: 
+\vspace{5mm}
+El término monitor de máquina virtual (VMM por sus siglas en inglés \textit{Virtual Machine Monitor}), fue establecido en el trabajo de \textit{Popek} y \textit{Goldger} \cite{Popek1974}, en el cual  se definieron las bases conceptuales de un VMM como una pieza de software que tiene las siguientes tres características esenciales: \\
 \begin{enumerate}
 	\item \textit{Equivalencia}: Proveer un ambiente para los programas, el cual es idéntico a la máquina original.\\
 	
@@ -72,12 +72,12 @@ La definición de un VMM está relacionada con una capa software que proporciona
 	\label{fig:VMM}
 \end{figure}
 
-\subsection{Técnicas de virtualización}
-
+\subsection{Técnicas de virtualización}\label{sec:técnicas}
+\vspace{5mm}
 A continuación, se describen dos de las principales técnicas de virtualización comúnmente utilizadas con son la \textit{basada en hipersivor} y la \textit{basada en contenedores}, estas técnicas permiten en general lograr consolidar componentes hardware y brindar un ambiente de ejecución virtual para sistemas o procesos respectivamente.
 
 \subsubsection{Virtualización basada en hipervisor}
-
+\vspace{5mm}
 La técnica de virtualización basada en hipervisor consiste en la utilización del VMM como elemento central, el cual puede estar ubicado de dos maneras diferentes. La primera forma consiste en ubicar el hipervisor directamente sobre el hardware. Esta técnica es también conocida como virtualización \textit{bare-metal} o \textit{nativa}, y al hipervisor se le denomina de \textit{Tipo 1} (Figura \ref{fig:Bare-metalHypervisor}).  La utilización de este tipo de hipervisor no necesita la presencia de un sistema operativo subyacente en la RM. La segunda realiza la instalación del hipervisor sobre un sistema operativo existente. Esta técnica es también conocida como virtualización \textit{alojada} o \textit{basada en host}, y al hipervisor se le considera de \textit{Tipo 2} (ver figura \ref{fig:host-basedHypervisor}). Como característica general de la virtualización basada en hipervisor, se tiene la creación de máquinas virtuales completas, las cuales pueden ejecutar sistemas operativos \textit{guest} independientes y posiblemente diferentes, siempre y cuando sean compatibles con arquitectura virtual entregada. 
 
 
@@ -98,7 +98,7 @@ La técnica de virtualización basada en hipervisor consiste en la utilización 
 \end{figure}
 
 \subsubsection{Virtualización basada en contenedores}
-
+\vspace{5mm}
 La técnica de virtualización basada en contenedores utiliza como base un sistema operativo preexistente y consiste en la generación de entornos virtuales de ejecución para procesos. Estos entornos de ejecución son comúnmente llamados \textit{contenedores} (ver figura \ref{fig:container-baseVirtualization}). Esta técnica de virtualización gana cada día mayor aceptación en los ámbitos académico y productivo, debido a que, a diferencia de la virtualización basada en hipervisor, no es necesario generar VMs con sistemas operativos completos, sino que se utilizan partes fundamentales del sistema operativo \textit{host} para generar los entornos virtuales de operación para los procesos \parencite{Kon2017}. Lo anterior supone una menor carga computacional necesaria para generar el entorno virtual y de igual forma supone que dicho entorno está sujeto al tipo de sistema operativo subyacente. 
 
 
@@ -111,9 +111,8 @@ La técnica de virtualización basada en contenedores utiliza como base un siste
 \end{figure}
 
 
-\subsection{Taxonomía de Tecnologías de Virtualización}
-
-
+\subsection{Taxonomía de Tecnologías de Virtualización}\label{sec:taxonomía}
+\vspace{5mm}
 
 \begin{figure}[!htp]
 	\centering
@@ -129,75 +128,109 @@ El presente trabajo utiliza como base conceptual la taxonomía de tecnologías d
 
 
 \subsubsection{Virtualización de Hardware o Sistema}
+\vspace{5mm}
 Esta categoría se caracteriza por utilizar un hipervisor \textit{Tipo 1} directamente sobre el hardware (\textit{bare-metal}) y a partir de él, se ubican las VMs con sus respectivos sistemas operativos \textit{guest} (estos sistemas no logran percibir la condición de virtualización), los cuales soportan a su vez las aplicaciones particulares de los usuarios \parencite{Pessolani2012}.\\
 
-Esta técnica de virtualización es también llamada \textit{Virtualización completa} y con relación a la arquitectura x86, está basada en la combinación de técnicas de traducción binaria y ejecución directa. Este enfoque busca traducir el código del kernel del sistema operativo \textit{guest}, para reemplazar las instrucciones no virutalizables con unas nuevas que tengan efecto en el hardware virtual\parencite{VMware2008}. 
+Esta técnica de virtualización es también llamada \textit{Virtualización completa} y con relación a la arquitectura x86, está basada en la combinación de técnicas de traducción binaria y ejecución directa. Este enfoque busca traducir el código del kernel del sistema operativo \textit{guest}, para reemplazar las instrucciones no virutalizables con unas nuevas que tengan efecto en el hardware virtual \parencite{VMware2008}. 
 
 \subsubsection{Para-Virtualización}
+\vspace{5mm}
+
 Esta categoría tiene la distribución de sus elementos similar a la \textit{virtualización de hardware o sistema} y también utiliza un hipervisor \textit{Tipo 1}, pero en este caso el sistema operativo \textit{guest} se considera que está \textit{Para-virtualizado}, esto es que ha sido modificado para tener conocimiento del hecho de estar virtualizado y de esta manera sacar provecho de esa situación y en consecuencia obtener un mejor rendimiento. \parencite{Pessolani2012}\\
 
-La palabra ``Para'' viene del Griego y significa ``al lado de''. En este contexto entonces signfica ``al lado de la virtualización''. La \textit{paravirtualización} se refiere a la comunicación entre el sistema operativo \textit{guest} y el hipervisor para mejorar el desempeño y la eficiencia. Esta técnica de virtualización también es conocida como \textit{Virtualización asistida por el sistema operativo} \parencite{VMware2008}.
-
-
+La palabra ``Para'' viene del Griego y significa ``al lado de''. En este contexto entonces signfica ``al lado de la virtualización''. La \textit{paravirtualización} se refiere a la comunicación entre el sistema operativo \textit{guest} y el hipervisor para mejorar el desempeño y la eficiencia. Esta técnica de virtualización también es conocida como \textit{Virtualización asistida por el sistema operativo} \parencite{VMware2008}.\\
 
 \subsubsection{Virtualización basada en Sistema Operativo}
+\vspace{5mm}
 Esta categoría, a diferencia de las anteriores no utiliza un hipervisor y en contraste, se basa en la utilización de espacios de trabajo independientes llamados \textit{contenedores}, los cuales están basados en el sistema operativo \textit{host}. Estos contenedores permiten la ejecución de aplicaciones genéricas de forma independiente.\\
 
 \subsubsection{Virtualización a nivel de proceso o Aplicación}
+\vspace{5mm}
 Este tipo de virtualización utiliza un proceso  o aplicación sobre el sistema operativo para brindar una máquina virtual que permita la ejecución de procesos basados en esa máquina, por ejemplo JVM y las aplicaciones Java respectivamente. \\ 
 
 \subsubsection{Virtualización de Sistema Operativo}
+\vspace{5mm}
 Este tipo de virtualización necesita un sistema operativo \textit{host} el cual lleva a cabo las funciones de un hipervisor para soportar los sistemas operativos \textit{guests},  que a su vez tienen sus propias aplicaciones completamente independientes, por ejemplo \textit{User Mode Linux} \parencite{Dike2006}  y \textit{Minix Over Linux} \parencite{Pessolani2012}.
 
 
-\subsection{Beneficios de la virtualización}
-
-Las tecnologías de virtualización presentan para las organizaciones una gran cantidad de beneficios en diversos aspectos como el económico, técnico, estratégico y ecológico; lo cuales se describen a continuación.\\
+\subsection{Beneficios de la virtualización} \label{sec:beneficios}
+\vspace{5mm}
+Las tecnologías de virtualización presentan para las organizaciones una gran cantidad de beneficios en diversos aspectos como el económico, técnico, estratégico y ecológico; los cuales se describen a continuación \parencite{Shirinbab2019}. \\
 
 \begin{itemize}
 	\item \textbf{Beneficios económicos}\\
 	\begin{itemize}
 		
-		\item \textit{Reducción de compras en TI}: A través de la combinación de la consolidación física y las tecnologías de virtualización, es posible lograr la disminución en la compra de componentes de TI en las organizaciones. Esta disminución se logra, debido a que en muchos casos es posible utilizar 20 máquinas virtuales o más por cada servidor físico. \\
+		\item \textit{Reducción de compras en TI}\vspace{3mm}
 		
-		\item \textit{Mejor ROI}: La virtualización está en la línea de la mejora del ROI, por el hecho de lograr una tasa adecuada en la  utilización de los recurso de TI, esto es, evitando el sobre-dimensionamiento de los servidores. En su lugar, se obtiene una mayor aprovechamiento de las inversiones e incluso una reducción de las mismas como lo dijo anteriormente. \\
+		A través de la combinación de la consolidación física y las tecnologías de virtualización, es posible lograr la disminución en la compra de componentes de TI en las organizaciones. Esta disminución se logra, debido a que en muchos casos es posible utilizar 20 máquinas virtuales o más por cada servidor físico. \\
+		
+		\item \textit{Mejor ROI}\vspace{3mm}
+		
+		La virtualización está en la línea de la mejora del ROI, por el hecho de lograr una tasa adecuada en la  utilización de los recurso de TI, esto es, evitando el sobre-dimensionamiento de los servidores. En su lugar, se obtiene una mayor aprovechamiento de las inversiones e incluso una reducción de las mismas como lo dijo anteriormente. \\
 				
-		\item \textit{Menor TCO}: Debido a que muchas máquinas virtuales se crean por cada servidor físico, se logra reducir los contratos por soporte y mantenimiento de estos servidores, además de se disminuye el consumo eléctrico al contar con menos equipos, lo que impacta también la reducción del gasto en energía que deben a asumir las organizaciones.\\
+		\item \textit{Menor TCO}\vspace{3mm}
+		
+		Debido a que muchas máquinas virtuales se crean por cada servidor físico, se logra reducir los contratos por soporte y mantenimiento de estos servidores, además de se disminuye el consumo eléctrico al contar con menos equipos, lo que impacta también la reducción del gasto en energía que deben a asumir las organizaciones.\\
 		
 	\end{itemize}
 	\item \textbf{Beneficios técnicos}\\
 	\begin{itemize}
-		\item \textit{Administración de TI simplificada}: Con la implementación de las tecnologías de virtualización en un departamento de TI, es notoria la simplificación de tareas a realizar con relación a los mantenimientos físicos en los equipos, debido a que hay menor cantidad de servidores para atender las necesidades organizacionales. Por otro lado, las tecnologías de virtualización ofrecen herramientas software que permiten la unificación de la administración, facilitando la gestión y disminuyendo el personal necesario en estas tareas.\\
+		\item \textit{Administración de TI simplificada}\vspace{3mm}
 		
-		\item \textit{Aprovisionamiento}: Algunas organizaciones tiene que proveer ambientes de trabajo homogéneos a diversos empleados como es el caso de las compañías de desarrollo de software, editores de revistas o diseñadores gráficos. Esta situación es especialmente favorable para lograr mayor productividad de los empleados al momento de ser contratados, de tal forma que puedan contar rápidamente con una ambiente de trabajo totalmente operativo. Incluso en caso de deterioro de los sistemas operativos o por causas ajenas como daños en equipos, a través de copias de respaldo se pueden realizar un rápido aprovisionamiento para garantizar productividad y continuidad de necio.\\  
+		Con la implementación de las tecnologías de virtualización en un departamento de TI, es notoria la simplificación de tareas a realizar con relación a los mantenimientos físicos en los equipos, debido a que hay menor cantidad de servidores para atender las necesidades organizacionales. Por otro lado, las tecnologías de virtualización ofrecen herramientas software que permiten la unificación de la administración, facilitando la gestión y disminuyendo el personal necesario en estas tareas.\\
 		
-		\item \textit{Copias de respaldo}: La virtualización provee una capa de abstracción de la infraestructura de TI, la cual es representada a través de un conjunto de  archivos. Estos archivos pueden ser fácilmente respaldados y restaurados. Esta característica favorece en la realización de copias de seguridad incluso en tiempo real y simplifican los procesos de recuperación ante desastres.\\
+		\item \textit{Aprovisionamiento}\vspace{3mm}
 		
-		\item \textit{Balanceo de carga}: Con la virtualización, una organización puede decidir según sus necesidades particulares, realizar ajustes dinámicos sobre el uso de su infraestructura de cómputo, de tal forma que se pueda balancear las cargas de trabajo al punto tal que se brinden las tasas de utilización deseadas en los recursos de TI o responder de forma efectiva frente a casos de falla en los componentes físicos.\\
+		Algunas organizaciones tiene que proveer ambientes de trabajo homogéneos a diversos empleados como es el caso de las compañías de desarrollo de software, editores de revistas o diseñadores gráficos. Esta situación es especialmente favorable para lograr mayor productividad de los empleados al momento de ser contratados, de tal forma que puedan contar rápidamente con una ambiente de trabajo totalmente operativo. Incluso en caso de deterioro de los sistemas operativos o por causas ajenas como daños en equipos, a través de copias de respaldo se pueden realizar un rápido aprovisionamiento para garantizar productividad y continuidad de necio.\\  
 		
-		\item \textit{Migración en vivo}: Algunas herramientas de virtualización proveen el posibilidad de realizar el movimiento de las máquinas virtuales aún en plena ejecución, es decir que se trasladan desde un servidor a otro. Este movimiento se realiza sin que represente a los usuarios algún tipo fallo en la disponibilidad de los servicios soportados por la máquina virtual que se esté moviendo. \\
+		\item \textit{Copias de respaldo}\vspace{3mm}
+		
+		La virtualización provee una capa de abstracción de la infraestructura de TI, la cual es representada a través de un conjunto de  archivos. Estos archivos pueden ser fácilmente respaldados y restaurados. Esta característica favorece en la realización de copias de seguridad incluso en tiempo real y simplifican los procesos de recuperación ante desastres.\\
+		
+		\item \textit{Balanceo de carga}\vspace{3mm}
+		
+		Con la virtualización, una organización puede decidir según sus necesidades particulares, realizar ajustes dinámicos sobre el uso de su infraestructura de cómputo, de tal forma que se pueda balancear las cargas de trabajo al punto tal que se brinden las tasas de utilización deseadas en los recursos de TI o responder de forma efectiva frente a casos de falla en los componentes físicos.\\
+		
+		\item \textit{Migración en vivo}\vspace{3mm}
+		
+		Algunas herramientas de virtualización proveen el posibilidad de realizar el movimiento de las máquinas virtuales aún en plena ejecución, es decir que se trasladan desde un servidor a otro. Este movimiento se realiza sin que represente a los usuarios algún tipo fallo en la disponibilidad de los servicios soportados por la máquina virtual que se esté moviendo. \\
 				
-		\item \textit{Seguridad}: Las tecnologías de virtualización proveen la posibilidad de aislar cada máquina virtual de las otras, así, es posible agregar un eslabón adicional en la cadena de seguridad de TI. Por otro lado, al contar con una administración centralizada mejora el monitoreo y control de las máquinas virtuales para aplicación efectiva de políticas de seguridad.\\
+		\item \textit{Seguridad}\vspace{3mm}
+		
+		Las tecnologías de virtualización proveen la posibilidad de aislar cada máquina virtual de las otras, así, es posible agregar un eslabón adicional en la cadena de seguridad de TI. Por otro lado, al contar con una administración centralizada mejora el monitoreo y control de las máquinas virtuales para aplicación efectiva de políticas de seguridad.\\
 		
 	\end{itemize}
 	\item \textbf{Beneficios estratégicos}\\
 	\begin{itemize}
 		
-		\item \textit{Consolidación}: Las tecnologías de virtualización permiten reducir la cantidad de componentes físicos de TI necesarios en las organizaciones, permitiendo establecer mejores contratos de soporte y mantenimiento de los mismos, además de realizar un optimo aprovechamiento de los recursos de TI existentes, al lograr una mayor tasa de utilización de los mismos.\\
+		\item \textit{Consolidación}\vspace{3mm}
 		
-		\item \textit{Continuidad de negocio}. Es evidente la existencia de diversas situaciones amenazantes que pueden colocar a las organizaciones frente a contingencias, desastres naturales o fallas en los elementos de la infraestructura de cómputo. Estas situaciones puede traer consecuencias como la pérdida de ganancias y clientes;  la aplicación de sanciones por posibles incumplimientos, además de la deficiencia de imagen proyectada por no tener disponibles los servicios objeto del negocio. Es por esto que las tecnologías de virtualización, proveen mecanismos tecnológicos que como una alternativa de solución a cada uno de los problemas antes mencionados. Por ejemplo, con la virtualización existe la posibilidad de continuar la operación de servicios en línea pese a la falla directa de un servidor físico; esto se logra, gracias a técnicas que permiten el movimiento de máquinas virtuales a otros servidores que aun se encuentren disponibles. Aspectos como estos, permiten ir claramente en el camino de mejora en los procesos de continuidad de negocio y permite también la construcción de eficientes planes de recuperación antes desastres.\\
+		Las tecnologías de virtualización permiten reducir la cantidad de componentes físicos de TI necesarios en las organizaciones, permitiendo establecer mejores contratos de soporte y mantenimiento de los mismos, además de realizar un optimo aprovechamiento de los recursos de TI existentes, al lograr una mayor tasa de utilización de los mismos.\\
 		
-		\item \textit{Recuperación de desastres}: Es imposible evitar la materialización de un desastre, pero gracias a las tecnologías de virtualización, es posible realizar una rápida recuperación, a partir de copias de respaldo existentes, las máquinas virtuales pueden ser desplegadas en minutos en una nueva infraestructura de cómputo o incluso ubicada en linea como servicio de \textit{Cloud Computing}.\\
+		\item \textit{Continuidad de negocio}\vspace{3mm}
+		
+		Es evidente la existencia de diversas situaciones amenazantes que pueden colocar a las organizaciones frente a contingencias, desastres naturales o fallas en los elementos de la infraestructura de cómputo. Estas situaciones puede traer consecuencias como la pérdida de ganancias y clientes;  la aplicación de sanciones por posibles incumplimientos, además de la deficiencia de imagen proyectada por no tener disponibles los servicios objeto del negocio. Es por esto que las tecnologías de virtualización, proveen mecanismos tecnológicos que como una alternativa de solución a cada uno de los problemas antes mencionados. Por ejemplo, con la virtualización existe la posibilidad de continuar la operación de servicios en línea pese a la falla directa de un servidor físico; esto se logra, gracias a técnicas que permiten el movimiento de máquinas virtuales a otros servidores que aun se encuentren disponibles. Aspectos como estos, permiten ir claramente en el camino de mejora en los procesos de continuidad de negocio y permite también la construcción de eficientes planes de recuperación antes desastres.\\
+		
+		\item \textit{Recuperación de desastres}\vspace{3mm}
+		
+		Es imposible evitar la materialización de un desastre, pero gracias a las tecnologías de virtualización, es posible realizar una rápida recuperación, a partir de copias de respaldo existentes, las máquinas virtuales pueden ser desplegadas en minutos en una nueva infraestructura de cómputo o incluso ubicada en linea como servicio de \textit{Cloud Computing}.\\
 		
 	\end{itemize}
 	\item \textbf{Beneficios ecológicos}\\
 	\begin{itemize}
 		
-		\item \textit{Eficiencia energética}: Al utilizar tecnologías de virtualización se obtiene una reducción de los servidores físicos necesarios en las organizaciones y en consecuencia se obtiene menor consumo de energía para mantener las operaciones de producción organizacional. \\
+		\item \textit{Eficiencia energética}\vspace{3mm}
 		
-		\item \textit{Reducción en refrigeración}: Otro efecto de la disminución en la cantidad de servidores físicos es la generación de menos calor y en consecuencia menor esfuerzo para lograr mantener los centros de datos en condiciones de climatización ideales para la operación de la infraestructura de TI.\\
+		Al utilizar tecnologías de virtualización se obtiene una reducción de los servidores físicos necesarios en las organizaciones y en consecuencia se obtiene menor consumo de energía para mantener las operaciones de producción organizacional. \\
 		
-		\item \textit{Menor huella de carbono}: Al requerir menor cantidad de servidores físicos, la disminución de este tipo de aparatos tiene también una reducción en el impacto ambiental de su fabricación y se alinea con una disminución en la huella de carbono de las organizaciones que utilizan la virtualización.\\
+		\item \textit{Reducción en refrigeración}\vspace{3mm}
+		
+		Otro efecto de la disminución en la cantidad de servidores físicos es la generación de menos calor y en consecuencia menor esfuerzo para lograr mantener los centros de datos en condiciones de climatización ideales para la operación de la infraestructura de TI.\\
+		
+		\item \textit{Menor huella de carbono}\vspace{3mm}
+		
+		Las organizaciones que hacen uso de las tecnologías de virtualización logran reducir la cantidad de servidores físicos que utilizan y en prospectiva, esta acción logra también una reducción en el impacto ambiental. Esta impacto positivo está relacionado directamente con la disminución en la fabricación de unidades físicas de servidores, lo cual presenta una clara alineación con la reducción en la huella de carbono que deja la industria de TI en general.\\
 	\end{itemize}
 \end{itemize}
 
